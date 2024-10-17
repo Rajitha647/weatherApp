@@ -58,10 +58,12 @@ function WeatherApp() {
                 <img src={search} onClick={handleSearchClick} alt="Search Icon" />
             </div>
             {weatherdata && (
-                <>
+                <>   <div className='weathericon'>
                     <img src={weatherIcons[weatherdata.weather[0].main] || clear} alt="Weather Icon" className="weatherIcon" />
                     <p className="temp">{weatherdata.main.temp}°C</p>
+                    </div>
                     <p className="location">{weatherdata.name}</p>
+                   
                     <div className="row">
                         <div className="col">
                             <img src={humidityIcon} alt="Humidity Icon" />
